@@ -1,0 +1,186 @@
+.episode-page { max-width: 700px; margin: 0 auto; padding: 0 32px 60px; }
+
+/* ============ HERO ============ */
+.episode-hero {
+  padding: 70px 0 40px;
+  text-align: center;
+}
+
+.episode-hero h1 {
+  font-size: 48px;
+  line-height: 1.12;
+  margin: 10px 0 28px;
+}
+
+/* Passport stamp motif */
+.stamp-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.stamp {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  border: 1.5px solid var(--gold);
+  border-radius: 3px;
+  padding: 6px 12px;
+  transform: rotate(-3deg);
+  opacity: 0.85;
+}
+
+.stamp:nth-child(3) { transform: rotate(2deg); }
+
+.stamp.filled {
+  background: var(--wine-deep);
+  color: var(--white);
+  border-color: var(--wine-deep);
+}
+
+.stamp.outline {
+  background: transparent;
+  color: var(--wine-deep);
+  border-color: var(--wine-deep);
+}
+
+.stamp-line {
+  width: 36px;
+  height: 1px;
+  background: var(--parchment-dim);
+}
+
+/* ============ BODY RHYTHM ============ */
+.episode-body {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.episode-body p {
+  margin: 0 0 22px;
+}
+
+/* Section chapters */
+.chapter {
+  font-size: 28px;
+  margin: 64px 0 26px;
+  padding-top: 32px;
+  border-top: 1px solid var(--parchment-dim);
+}
+
+.episode-body > .chapter:first-of-type {
+  margin-top: 48px;
+}
+
+/* Short standalone beats — the "picked moments" */
+.beat {
+  font-style: italic;
+  color: var(--wine-deep);
+}
+
+.beat-big {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--wine-deep);
+  margin: 4px 0 28px;
+}
+
+/* Playful asides, in a lighter quieter voice */
+.aside {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-style: italic;
+  opacity: 0.6;
+  margin-top: -12px;
+}
+
+/* Punchy vertical triplets */
+.triplet {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--wine-deep);
+  margin: 8px 0 28px;
+}
+
+/* Pull-out lines that deserve their own beat */
+.pull {
+  font-size: 26px;
+  font-style: italic;
+  color: var(--wine-deep);
+  text-align: center;
+  margin: 36px 0;
+  padding: 0 20px;
+}
+
+/* The Huarpe passage — deliberately heavier, no cute styling */
+.weighted {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.75;
+  background: var(--white);
+  border-left: 3px solid var(--wine-deep);
+  padding: 22px 26px;
+  margin: 28px 0;
+  color: var(--ink);
+}
+
+/* Closing recap — reads as one cascading passage, not a list */
+.recap-line {
+  font-size: 22px;
+  color: var(--wine-deep);
+  margin-bottom: 14px;
+}
+
+.recap-line:first-of-type {
+  margin-top: 8px;
+}
+
+.closing-line {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--wine-deep);
+  text-align: center;
+  margin: 44px 0 12px;
+}
+
+.closing-sub {
+  font-size: 17px;
+  font-style: italic;
+  text-align: center;
+  opacity: 0.75;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ============ CLOSE / FOOTER CTA ============ */
+.episode-close {
+  text-align: center;
+  padding: 60px 0 20px;
+}
+
+.episode-close .stamp-row { margin-bottom: 36px; }
+
+.tagline {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--wine-deep);
+  margin: 0 0 32px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 600px) {
+  .episode-hero h1 { font-size: 32px; }
+  .episode-body { font-size: 18px; }
+  .chapter { font-size: 22px; margin-top: 48px; padding-top: 24px; }
+  .beat-big { font-size: 24px; }
+  .pull { font-size: 21px; }
+  .triplet { font-size: 19px; }
+  .closing-line { font-size: 24px; }
+  .stamp { font-size: 10px; padding: 5px 9px; }
+}

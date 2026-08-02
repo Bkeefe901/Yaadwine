@@ -1,0 +1,91 @@
+.drink-time-essay .beat-line {
+  font-style: italic;
+  color: var(--wine-deep);
+  font-weight: 500;
+}
+
+.chapter-heading {
+  font-size: 26px;
+  color: var(--wine-deep);
+  margin: 8px 0 22px;
+}
+
+/* ============ WINE SPEC CARD ============ */
+.wine-card {
+  max-width: 620px;
+  margin: 50px auto;
+  background: var(--white);
+  border: 1px solid var(--parchment-dim);
+  border-left: 3px solid var(--gold);
+  padding: 32px 36px;
+  border-radius: 2px;
+}
+
+.wine-card-eyebrow {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 8px;
+}
+
+.wine-card h2 {
+  font-size: 30px;
+  margin: 0 0 4px;
+}
+
+.wine-card-region {
+  font-family: var(--font-body);
+  font-size: 14px;
+  opacity: 0.65;
+  margin: 0 0 22px;
+}
+
+.wine-card-body {
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.wine-card-body p {
+  margin: 0 0 14px;
+}
+
+.wine-card-tags {
+  font-weight: 600;
+  color: var(--wine-deep);
+  letter-spacing: 0.02em;
+  margin-top: 18px !important;
+}
+
+@media (max-width: 600px) {
+  .wine-card { padding: 26px 22px; margin: 36px auto; }
+  .wine-card h2 { font-size: 24px; }
+}
+
+/* ============ DRINK TIME PHOTO ============ */
+.drink-time-photo {
+  max-width: 620px;
+  margin: 36px auto;
+  text-align: center;
+}
+
+.drink-time-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  display: block;
+  box-shadow: 0 8px 24px rgba(18, 51, 42, 0.12);
+}
+
+.drink-time-photo figcaption {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--wine-deep);
+  opacity: 0.75;
+  margin-top: 12px;
+}

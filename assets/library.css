@@ -1,0 +1,139 @@
+.library-page { max-width: var(--max-width); margin: 0 auto; padding: 0 32px 100px; }
+
+.library-hero {
+  padding: 80px 0 60px;
+  max-width: 640px;
+}
+
+.library-hero h1 {
+  font-size: 48px;
+  margin: 8px 0 20px;
+}
+
+.library-sub {
+  font-size: 18px;
+  opacity: 0.78;
+  max-width: 560px;
+}
+
+.pillar-block {
+  padding: 50px 0;
+  border-top: 1px solid var(--parchment-dim);
+}
+
+.pillar-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.pillar-heading .pillar-mark {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--gold);
+}
+
+.pillar-heading h2 { font-size: 30px; }
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.story-card {
+  background: var(--white);
+  padding: 28px 24px;
+  border-radius: 2px;
+  border-left: 3px solid var(--parchment-dim);
+  transition: border-color 0.2s ease;
+}
+
+.story-card h3 {
+  font-size: 18px;
+  line-height: 1.35;
+  margin: 10px 0 12px;
+  color: var(--wine-deep);
+}
+
+.human-question {
+  font-size: 14.5px;
+  font-style: italic;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.status-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.status-next {
+  border-left-color: var(--gold);
+}
+.status-next .status-tag {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.status-planned {
+  border-left-color: var(--route-teal);
+}
+.status-planned .status-tag {
+  background: rgba(78, 107, 92, 0.14);
+  color: var(--route-teal);
+}
+
+.status-idea {
+  border-left-color: var(--parchment-dim);
+}
+.status-idea .status-tag {
+  background: rgba(31, 27, 24, 0.06);
+  color: var(--ink);
+  opacity: 0.6;
+}
+
+@media (max-width: 860px) {
+  .story-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .story-grid { grid-template-columns: 1fr; }
+  .library-hero h1 { font-size: 34px; }
+}
+
+/* ============ FIRST GLASS SECTION ============ */
+.drink-time-block {
+  border-top: 1px dashed var(--parchment-dim);
+}
+
+.drink-time-block .pillar-heading {
+  margin-bottom: 16px;
+}
+
+.drink-time-block h2 {
+  font-size: 24px;
+  font-style: italic;
+  color: var(--wine-deep);
+}
+
+.drink-time-intro {
+  font-size: 16px;
+  opacity: 0.75;
+  max-width: 480px;
+  margin: 0 0 14px;
+}
+
+.drink-time-status {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--gold);
+  opacity: 0.9;
+}

@@ -1,0 +1,94 @@
+.essay-page { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+
+.essay-hero {
+  padding: 80px 0 50px;
+  text-align: center;
+}
+
+.essay-hero h1 {
+  font-size: 52px;
+  line-height: 1.1;
+}
+
+.essay {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.essay p { margin: 0 0 26px; }
+
+.pull-quote {
+  font-size: 28px;
+  font-style: italic;
+  color: var(--wine-deep);
+  text-align: center;
+  margin: 48px 0 !important;
+  line-height: 1.4;
+}
+
+.believes-block, .not-block {
+  padding: 60px 0;
+  border-top: 1px solid var(--parchment-dim);
+}
+
+.believes-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 40px;
+}
+
+.believes-block li {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--wine-deep);
+  padding-left: 20px;
+  border-left: 2px solid var(--gold);
+}
+
+.not-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.not-grid span {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: 1px solid var(--ink);
+  opacity: 0.55;
+  border-radius: 20px;
+}
+
+.essay-close {
+  text-align: center;
+  padding: 60px 0 100px;
+}
+
+.closing-line {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--wine-deep);
+  margin: 0 0 12px;
+}
+
+.closing-sub {
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .essay-hero h1 { font-size: 36px; }
+  .essay { font-size: 18px; }
+  .pull-quote { font-size: 22px; }
+  .believes-block ul { grid-template-columns: 1fr; }
+}
