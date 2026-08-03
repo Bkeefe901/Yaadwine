@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
+    <link rel="icon" href="assets/favicon.png" />
+    {% if not skipSocialMeta %}
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ ogDescription or description }}" />
+    <meta property="og:image" content="{{ ogImage or 'assets/og-image.png' }}" />
+    <meta property="og:type" content="{{ ogType or 'website' }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    {% for sheet in extraStyles %}
+    <link rel="stylesheet" href="assets/{{ sheet }}.css" />
+    {% endfor %}
+    <link rel="stylesheet" href="assets/footer.css" />
+    {{ extraHead | safe }}
+  </head>
+  <body>
+    <div class="grain"></div>
+
+    {% include "partials/header.njk" %}
+
+    {{ content | safe }}
+
+    {% if not hideMigrate %}
+    {% include "partials/foot.njk" %}
+    {% else %}
+    {% include "partials/footer.njk" %}
+    {% endif %}
+
+    {% if not hideScript %}
+    <script src="assets/script.js"></script>
+    {% endif %}
+  </body>
+</html>

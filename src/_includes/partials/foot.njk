@@ -1,0 +1,38 @@
+<!-- MIGRATE WITH US -->
+<section class="migrate-section">
+  <div class="migrate-inner">
+    <p class="migrate-eyebrow">Stay Curious</p>
+    <h2 class="migrate-heading">Migrate With Us</h2>
+    <p class="migrate-sub">
+      No scores. No spam. Just stories about wine, movement, and the people
+      behind every bottle — sent when a new one is ready.
+    </p>
+    <form
+      class="migrate-form"
+      id="migrateForm"
+      name="migrate"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="migrate" />
+      <p style="display: none">
+        <label>Don't fill this out: <input name="bot-field" /></label>
+      </p>
+      <input
+        type="email"
+        id="migrateEmail"
+        name="email"
+        placeholder="you@email.com"
+        required
+      />
+      <button type="submit">Migrate With Us</button>
+    </form>
+    <p class="migrate-success" id="migrateSuccess">
+      You're in. See you with the next journey. 🍷
+    </p>
+    <p class="migrate-note">One email. No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+{% include "partials/footer.njk" %}

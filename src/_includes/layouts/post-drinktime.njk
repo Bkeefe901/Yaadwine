@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+extraStyles: ["about", "drinktime"]
+ogType: article
+---
+<main class="essay-page">
+  <section class="essay-hero">
+    <p class="eyebrow">{{ eyebrow }}</p>
+    <h1>{{ heroTitle | safe }}</h1>
+  </section>
+
+  <article class="essay drink-time-essay">
+    {{ content | safe }}
+  </article>
+
+  <section class="wine-card">
+    <p class="wine-card-eyebrow">The Wine</p>
+    <h2>{{ wine.name }}</h2>
+    <p class="wine-card-region">{{ wine.region }}</p>
+
+    <div class="wine-card-body">
+      {{ wine.body | markdownify | safe }}
+      {% if wine.tags %}<p class="wine-card-tags">{{ wine.tags | join(" &nbsp;&middot;&nbsp; ") | safe }}</p>{% endif %}
+    </div>
+  </section>
+
+  <article class="essay drink-time-essay">
+    <h2 class="chapter-heading">My Take</h2>
+
+    {{ takeContent | markdownify | safe }}
+
+    {% if photo and photo.src %}
+    <figure class="drink-time-photo">
+      <img src="{{ photo.src }}" alt="{{ photo.alt }}" />
+      <figcaption>{{ photo.caption }}</figcaption>
+    </figure>
+    {% endif %}
+
+    <p class="beat-line">{{ takeBeatLine }}</p>
+  </article>
+
+  <section class="essay-close">
+    <p class="closing-line">{{ closingLine | safe }}</p>
+    <p class="closing-sub">{{ closingSub }}</p>
+  </section>
+  <div class="convo-starter">
+    <p class="thoughts-tag">Got thoughts on this one? Come tell us on Instagram.</p>
+    <b class="convo-link"><a href="https://instagram.com/yaadwine_">@yaadwine_</a></b>
+  </div>
+</main>
