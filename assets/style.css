@@ -372,6 +372,24 @@ h1, h2, h3 {
   margin: 0 0 32px;
 }
 
+.thoughts-tag {
+  font-size: 15px;
+  opacity: 0.6;
+}
+
+.convo-starter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.convo-link {
+  color: var(--wine-deep);
+  font-size: medium;
+}
+
 /* ===================== FOOTER ===================== */
 .site-footer {
   background: var(--wine-deep);
