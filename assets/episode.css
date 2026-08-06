@@ -202,7 +202,7 @@
 }
 
 /* ============ STAMP MAP TOOLTIP ============ */
-.stamp {
+/* .stamp {
   cursor: help;
 }
 
@@ -238,7 +238,7 @@
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
-}
+} */
 
 @media (max-width: 600px) {
   .stamp-map-tip svg { width: 200px; }
