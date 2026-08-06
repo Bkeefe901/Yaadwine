@@ -9,7 +9,15 @@
 .episode-hero h1 {
   font-size: 48px;
   line-height: 1.12;
-  margin: 10px 0 28px;
+  margin: 10px 0 12px;
+}
+
+.episode-subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--ink);
+  opacity: 0.7;
+  margin: 0 0 28px;
 }
 
 /* Passport stamp motif */
@@ -183,4 +191,111 @@
   .triplet { font-size: 19px; }
   .closing-line { font-size: 24px; }
   .stamp { font-size: 10px; padding: 5px 9px; }
+}
+
+.pairing-heading {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gold);
+  margin: 40px 0 16px;
+}
+
+/* ============ STAMP MAP TOOLTIP ============ */
+.stamp {
+  cursor: help;
+}
+
+.stamp-map-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.stamp-map-tip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--wine-deep);
+  border-radius: 6px;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 30;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.stamp-map-tip svg {
+  width: 240px;
+  height: auto;
+  display: block;
+}
+
+.stamp-map-wrap:hover .stamp-map-tip,
+.stamp-map-wrap.active .stamp-map-tip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 600px) {
+  .stamp-map-tip svg { width: 200px; }
+  .stamp-map-tip { padding: 12px; left: 0; transform: translateX(0) translateY(4px); }
+  .stamp-map-wrap.active .stamp-map-tip,
+  .stamp-map-wrap:hover .stamp-map-tip { transform: translateX(0) translateY(0); }
+}
+
+/* ============ PATOIS GLOSSARY TOOLTIPS ============ */
+.patois {
+  position: relative;
+  cursor: help;
+  border-bottom: 1.5px dotted var(--gold);
+  display: inline;
+}
+
+.patois-tip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--wine-deep);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 8px 12px;
+  border-radius: 4px;
+  white-space: normal;
+  width: max-content;
+  max-width: 240px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 20;
+}
+
+.patois-tip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--wine-deep);
+}
+
+.patois:hover .patois-tip,
+.patois.active .patois-tip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 600px) {
+  .patois-tip { font-size: 13px; max-width: 200px; }
 }

@@ -44,6 +44,7 @@
 }
 
 .story-card {
+  position: relative; /* anchors the stretched link below, so it covers this card and nothing more */
   background: var(--white);
   padding: 28px 24px;
   border-radius: 2px;
@@ -56,6 +57,19 @@
   line-height: 1.35;
   margin: 10px 0 12px;
   color: var(--wine-deep);
+}
+
+
+/* Makes the whole card clickable while keeping a single real <a> for
+   accessibility/SEO — the link's hit area stretches to fill .story-card.
+   z-index is required here: .human-question below has opacity < 1, which
+   pulls it into the same stacking layer as this positioned pseudo-element,
+   and it would otherwise win (and block clicks) by coming later in the DOM. */
+.story-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
 .human-question {

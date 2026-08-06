@@ -37,4 +37,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
   }
+
+  // Patois glossary tooltips — tap to toggle on mobile (no hover on touch devices)
+  document.querySelectorAll(".patois").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const wasActive = el.classList.contains("active");
+      document.querySelectorAll(".patois.active, .stamp-map-wrap.active").forEach((other) => other.classList.remove("active"));
+      if (!wasActive) el.classList.add("active");
+    });
+  });
+
+  // Stamp map tooltips — same tap-to-toggle behavior
+  document.querySelectorAll(".stamp-map-wrap").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const wasActive = el.classList.contains("active");
+      document.querySelectorAll(".patois.active, .stamp-map-wrap.active").forEach((other) => other.classList.remove("active"));
+      if (!wasActive) el.classList.add("active");
+    });
+  });
+
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".patois.active, .stamp-map-wrap.active").forEach((el) => el.classList.remove("active"));
+  });
 });
