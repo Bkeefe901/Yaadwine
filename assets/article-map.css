@@ -1,0 +1,45 @@
+/* Reusable world map for articles — shows a couple of countries highlighted,
+   always visible under the article hero (not a hover/tap tooltip). Used on
+   pages that include a <div class="article-map"> block; the actual SVG is
+   injected by article-map.js so it can be reused across articles without
+   copy-pasting the whole map markup onto every page. */
+
+.article-map {
+  max-width: 640px;
+  margin: 32px auto 40px;
+  padding: 20px;
+  background: var(--parchment-dim);
+  border-radius: 4px;
+}
+
+.article-map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Base country color — deliberately quiet so the highlighted ones stand out */
+.article-map svg path,
+.article-map svg g {
+  fill: var(--parchment);
+  stroke: var(--wine-deep);
+  stroke-width: 0.5;
+}
+
+/* Some countries (e.g. France, Argentina) are <g> groups wrapping several
+   <path>s for islands/territories — target those child paths explicitly,
+   since the generic "path" rule above would otherwise override the fill
+   they'd normally inherit from a highlighted parent <g>. This highlights
+   the whole group by default, which is correct for archipelago countries
+   (Japan, Philippines, ...) that have no single "mainland" piece. */
+.article-map svg .highlighted,
+.article-map svg .highlighted path {
+  fill: var(--wine);
+}
+
+/* But where the map does mark a specific mainland piece (France, Argentina,
+   the UK, the US, ...), highlight only that — not overseas territories like
+   French Guiana that happen to share the same country group. */
+.article-map svg .highlighted:has(path.mainland) path:not(.mainland) {
+  fill: var(--parchment);
+}
