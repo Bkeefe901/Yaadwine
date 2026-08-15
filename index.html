@@ -1,292 +1,480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YaadWine — Every Bottle Has a Journey</title>
-<meta name="description" content="YaadWine explores the world through wine — stories of migration, history, culture, and science behind every bottle.">
-<link rel="icon" href="assets/favicon.png">
-<meta property="og:title" content="YaadWine — Every Bottle Has a Journey">
-<meta property="og:description" content="Exploring the world through wine — migration, history, culture, and science behind every bottle.">
-<meta property="og:image" content="assets/og-image.png">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
-<link rel="stylesheet" href="assets/footer.css">
-</head>
-<body>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7NCMWEVZXQ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<div class="grain"></div>
+      gtag("config", "G-7NCMWEVZXQ");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YaadWine — Every Bottle Has a Journey</title>
+    <meta
+      name="description"
+      content="YaadWine explores the world through wine — stories of migration, history, culture, and science behind every bottle."
+    />
+    <link rel="icon" href="assets/favicon.png" />
+    <meta property="og:title" content="YaadWine — Every Bottle Has a Journey" />
+    <meta
+      property="og:description"
+      content="Exploring the world through wine — migration, history, culture, and science behind every bottle."
+    />
+    <meta property="og:image" content="assets/og-image.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/footer.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
 
-<header class="site-header">
-    <a href="index.html" class="wordmark">
-      <img class="logo" src="assets/drink-time-photos/yaad-wine-with-leaves.svg" alt="YaadWine" width="150" height="150"/>
-    </a>
-  <nav class="main-nav">
-    <a href="about.html">Manifesto</a>
-    <a href="cellar.html">Cellar</a>
-    <a href="notebook.html">From YaadWine Crew!</a>
-  </nav>
-</header>
-
-<main>
-
-  <section class="hero">
-    <svg class="route-line" viewBox="0 0 1000 500" preserveAspectRatio="none" aria-hidden="true">
-      <path id="routePath" d="M 60,420 C 220,380 260,220 400,210 C 520,202 560,120 700,110 C 800,103 860,150 940,80"
-        fill="none" stroke="var(--gold)" stroke-width="2" stroke-dasharray="6 8" opacity="0.55"/>
-      <circle class="route-dot" cx="60" cy="420" r="5" fill="var(--wine)"/>
-      <circle class="route-dot" cx="400" cy="210" r="5" fill="var(--wine)"/>
-      <circle class="route-dot" cx="700" cy="110" r="5" fill="var(--wine)"/>
-      <circle class="route-dot" cx="940" cy="80" r="6" fill="var(--gold)"/>
-    </svg>
-
-    <div class="hero-inner">
-      <p class="eyebrow">Understanding Wine Through Movement</p>
-      <h1>Every bottle<br>has a journey.</h1>
-      <p class="hero-sub">YaadWine explores the world through wine — the migration, the history,
-        the culture, and the science behind every bottle.</p>
-      <div class="hero-actions">
-        <a href="about.html" class="btn btn-primary">Read the Manifesto</a>
-        <a href="cellar.html" class="btn btn-ghost">Explore the Cellar</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="thesis">
-    <p class="thesis-line">
-      <span class="thesis-strike">Here is the region. Here is the grape. Here is the classification.</span>
-    </p>
-    <p class="thesis-line thesis-answer">
-      How did it get there? Who moved it? Who changed it? Who was left out of the story?
-    </p>
-  </section>
-
-  <section class="why">
-    <p class="section-eyebrow">Why YaadWine</p>
-    <p class="why-text">Wine has always been a story of movement. Grapes crossed borders. People carried traditions across oceans. Cultures reshaped what was planted, produced, and poured.</p>
-    <p class="why-text">YaadWine exists to explore those journeys — because understanding where wine came from means understanding the people who carried it forward.</p>
-    <p class="why-text">History and celebration can sit at the same table.</p>
-  </section>
-
-  <section class="pillars">
-    <p class="section-eyebrow">The Lens</p>
-    <h2>Three ways we look at every bottle</h2>
-
-    <div class="pillar-grid">
-      <div class="pillar-card">
-        <span class="pillar-mark">01</span>
-        <h3>Wine Through Migration</h3>
-        <p>How people moved. How grapes moved. How ideas moved. How cultures mixed and changed each other along the way.</p>
-      </div>
-      <div class="pillar-card">
-        <span class="pillar-mark">02</span>
-        <h3>Wine Through Science</h3>
-        <p>Fermentation, microbiology, smoke taint, climate, yeast — the invisible forces that decide what ends up in the glass.</p>
-      </div>
-      <div class="pillar-card">
-        <span class="pillar-mark">03</span>
-        <h3>Wine Through Culture</h3>
-        <p>Food, music, art, history, language — the human context that gives a bottle meaning beyond what's in it.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="quiz-wrap">
-
-  <div class="quiz-hero">
-    <p class="section-eyebrow">The Wine Hole</p>
-    <h2>Wine Not Find Out?</h2>
-    <p>Five questions. No grape expectations. Let's see what's really in your glass.</p>
-  </div>
-
-  <div class="quiz-card">
-
-    <div class="quiz-step active" data-step="0">
-      <p class="quiz-progress">Round 1 of 5</p>
-      <p class="quiz-question">It's Friday night. What's actually happening?</p>
-      <button class="quiz-option" data-type="adventurer">Zero plans. I like to wing it, not vine it... wait, I'm doing both</button>
-      <button class="quiz-option" data-type="loyalist">Same spot, same order. If it ain't broke, don't uncork it</button>
-      <button class="quiz-option" data-type="romantic">Home, candles lit, romance-ing myself, honestly</button>
-      <button class="quiz-option" data-type="lifeoftheparty">Wherever the pour is loudest</button>
-    </div>
-
-    <div class="quiz-step" data-step="1">
-      <p class="quiz-progress">Round 2 of 5</p>
-      <p class="quiz-question">Someone asks what you're drinking. Be honest.</p>
-      <button class="quiz-option" data-type="loyalist">I already know what I like. Why mess with a good blend?</button>
-      <button class="quiz-option" data-type="adventurer">Something I can't pronounce and have zero plans to learn</button>
-      <button class="quiz-option" data-type="lifeoftheparty">Whatever's cold. I'm not picky, I'm efficient</button>
-      <button class="quiz-option" data-type="romantic">Something with a backstory. I need a plot, not just a pour</button>
-    </div>
-
-    <div class="quiz-step" data-step="2">
-      <p class="quiz-progress">Round 3 of 5</p>
-      <p class="quiz-question">You're in a wine shop with no plan. What happens?</p>
-      <button class="quiz-option" data-type="adventurer">I ask a stranger to pick for me. Grape leap of faith</button>
-      <button class="quiz-option" data-type="romantic">I read every back label like it owes me an apology</button>
-      <button class="quiz-option" data-type="loyalist">I go straight to my usual aisle. No detours, no drama</button>
-      <button class="quiz-option" data-type="lifeoftheparty">Prettiest label wins. I contain multitudes, none of them deep</button>
-    </div>
-
-    <div class="quiz-step" data-step="3">
-      <p class="quiz-progress">Round 4 of 5</p>
-      <p class="quiz-question">What's your actual wine "ick"?</p>
-      <button class="quiz-option" data-type="lifeoftheparty">People who won't stop talking about tannins mid-party</button>
-      <button class="quiz-option" data-type="loyalist">Being told my go-to is "basic." It's called consistency</button>
-      <button class="quiz-option" data-type="romantic">A bottle with absolutely zero personality. Boring is the real red flag</button>
-      <button class="quiz-option" data-type="adventurer">Playing it safe. I didn't come here to sip it safe</button>
-    </div>
-
-    <div class="quiz-step" data-step="4">
-      <p class="quiz-progress">Round 5 of 5</p>
-      <p class="quiz-question">If your last relationship were a wine, it would be...</p>
-      <button class="quiz-option" data-type="romantic">Complex. Layered. Took forever to open up. Very on-brand</button>
-      <button class="quiz-option" data-type="lifeoftheparty">Fun, fizzy, gone by morning. No notes</button>
-      <button class="quiz-option" data-type="loyalist">Reliable. Aged well. Somehow we're still corked together</button>
-      <button class="quiz-option" data-type="adventurer">A total gamble that somehow, against all odds, decanted</button>
-    </div>
-
-    <div class="quiz-result" data-result="adventurer">
-      <p class="result-tag">Your Wine Personality Is</p>
-      <h2>The Grape Escape</h2>
-      <p>You don't do safe, you do sauvignon. Grape nobody's heard of? Say less, you're already reaching for it. Predictable never lived here. Wine not.</p>
-      <a href="cellar.html" class="quiz-restart">Explore the Cellar</a>
-    </div>
-
-    <div class="quiz-result" data-result="romantic">
-      <p class="result-tag">Your Wine Personality Is</p>
-      <h2>Full-Bodied Feelings</h2>
-      <p>Need a plot, not just a pour. Respect. Bottle with no backstory? Hard pass. You're not drinking wine, you're drinking a whole novel, and you finished the whole thing in one sitting.</p>
-      <a href="cellar.html" class="quiz-restart">Explore the Cellar</a>
-    </div>
-
-    <div class="quiz-result" data-result="loyalist">
-      <p class="result-tag">Your Wine Personality Is</p>
-      <h2>Vintage and Proud</h2>
-      <p>Dang, you found what you like, so say less. You grown, I see you. That's confidence with a corkscrew. Trends are for 20 year olds. Same bottle, every time. Pass the popcorn.</p>
-      <a href="cellar.html" class="quiz-restart">Explore the Cellar</a>
-    </div>
-
-    <div class="quiz-result" data-result="lifeoftheparty">
-      <p class="result-tag">Your Wine Personality Is</p>
-      <h2>Pop, Fizz, Gone</h2>
-      <p>Wine's not the main character for you, the room is. Cold, easy, keeps moving. Say less. Real ones know: that's the healthiest wine relationship on this whole quiz.</p>
-      <a href="cellar.html" class="quiz-restart">Explore the Cellar</a>
-    </div>
-
-  </div>
-
-</section>
-
-  <section class="featured">
-    <p class="section-eyebrow">Latest Story</p>
-    <h2>Drink Time</h2>
-    <div class="featured-card">
-      <div class="featured-tag">New</div>
-      <h3>A Dream Deferred, A Shirt and A Bunch of Empty Wine Bottles</h3>
-      <p>A Name. A Shirt. No Business Plan.</p>
-      <a href="drink-time-dream-deferred.html" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Read the story</a>
-    </div>
-  </section>
-
-  <section class="believe">
-    <p class="section-eyebrow">What We Believe</p>
-    <ul class="believe-list">
-      <li>Wine belongs to everyone.</li>
-      <li>Every bottle has a story.</li>
-      <li>History tastes better in a glass.</li>
-      <li>Curiosity matters more than scores.</li>
-      <li>Great wine is about people before prestige.</li>
-      <li>Every bottle is a passport.</li>
-    </ul>
-  </section>
-
-  <section class="closing">
-    <p class="closing-line">Every bottle has a journey.<br>Every journey tells a wine story.</p>
-    <a href="about.html" class="btn btn-primary">Start with the Manifesto</a>
-  </section>
-
-</main>
-
-<!-- MIGRATE WITH US -->
-<section class="migrate-section">
-  <div class="migrate-inner">
-    <p class="migrate-eyebrow">Stay Curious</p>
-    <h2 class="migrate-heading">Migrate With Us</h2>
-    <p class="migrate-sub">No scores. No spam. Just stories about wine, movement, and the people behind every bottle — sent when a new one is ready.</p>
-    <form class="migrate-form" id="migrateForm" name="migrate" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="migrate">
-      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-      <input type="email" id="migrateEmail" name="email" placeholder="you@email.com" required>
-      <button type="submit">Migrate With Us</button>
-    </form>
-    <p class="migrate-success" id="migrateSuccess">You're in. See you with the next journey. 🍷</p>
-    <p class="migrate-note">One email. No spam. Unsubscribe anytime.</p>
-  </div>
-</section>
-
-<footer class="site-footer-full" id="footer-contact">
-  <div class="footer-full-inner">
-    <div class="footer-brand">
-      <span class="wordmark">YaadWine</span>
-      <p>Every bottle has a journey. New stories arrive when they're ready.</p>
-    </div>
-    <div class="footer-nav-col">
-      <div class="footer-nav-group">
-        <h4>Read</h4>
+    <header class="site-header">
+      <a href="index.html" class="wordmark">
+        <img
+          class="logo"
+          src="assets/drink-time-photos/yaad-wine-with-leaves.svg"
+          alt="YaadWine"
+          width="150"
+          height="150"
+        />
+      </a>
+      <nav class="main-nav">
         <a href="about.html">Manifesto</a>
         <a href="cellar.html">Cellar</a>
         <a href="notebook.html">From YaadWine Crew!</a>
-        <a href="how-we-research.html">How We Research</a>
-      </div>
-      <div class="footer-nav-group">
-        <h4>Connect</h4>
-        <a href="https://instagram.com/yaadwine_" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.linkedin.com/company/yaadwine/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:yaadwine@gmail.com">Email</a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 YaadWine</span>
-    <span>Exploring the world through wine.</span>
-  </div>
-</footer>
+      </nav>
+    </header>
 
-<script src="assets/script.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const scores = { adventurer: 0, romantic: 0, loyalist: 0, lifeoftheparty: 0 };
-  let currentStep = 0;
-  const totalSteps = 5;
-  const steps = document.querySelectorAll(".quiz-step");
-  const results = document.querySelectorAll(".quiz-result");
+    <main>
+      <section class="hero">
+        <svg
+          class="route-line"
+          viewBox="0 0 1000 500"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            id="routePath"
+            d="M 60,420 C 220,380 260,220 400,210 C 520,202 560,120 700,110 C 800,103 860,150 940,80"
+            fill="none"
+            stroke="var(--gold)"
+            stroke-width="2"
+            stroke-dasharray="6 8"
+            opacity="0.55"
+          />
+          <circle class="route-dot" cx="60" cy="420" r="5" fill="var(--wine)" />
+          <circle
+            class="route-dot"
+            cx="400"
+            cy="210"
+            r="5"
+            fill="var(--wine)"
+          />
+          <circle
+            class="route-dot"
+            cx="700"
+            cy="110"
+            r="5"
+            fill="var(--wine)"
+          />
+          <circle class="route-dot" cx="940" cy="80" r="6" fill="var(--gold)" />
+        </svg>
 
-  document.querySelectorAll(".quiz-option").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const type = btn.getAttribute("data-type");
-      scores[type]++;
-      steps[currentStep].classList.remove("active");
-      currentStep++;
-      if (currentStep < totalSteps) {
-        steps[currentStep].classList.add("active");
-      } else {
-        let winner = "adventurer";
-        let max = -1;
-        for (const key in scores) {
-          if (scores[key] > max) { max = scores[key]; winner = key; }
-        }
-        results.forEach((r) => {
-          if (r.getAttribute("data-result") === winner) r.classList.add("active");
+        <div class="hero-inner">
+          <p class="eyebrow">Understanding Wine Through Movement</p>
+          <h1>Every bottle<br />has a journey.</h1>
+          <p class="hero-sub">
+            YaadWine explores the world through wine — the migration, the
+            history, the culture, and the science behind every bottle.
+          </p>
+          <div class="hero-actions">
+            <a href="about.html" class="btn btn-primary">Read the Manifesto</a>
+            <a href="cellar.html" class="btn btn-ghost">Explore the Cellar</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="thesis">
+        <p class="thesis-line">
+          <span class="thesis-strike"
+            >Here is the region. Here is the grape. Here is the
+            classification.</span
+          >
+        </p>
+        <p class="thesis-line thesis-answer">
+          How did it get there? Who moved it? Who changed it? Who was left out
+          of the story?
+        </p>
+      </section>
+
+      <section class="why">
+        <p class="section-eyebrow">Why YaadWine</p>
+        <p class="why-text">
+          Wine has always been a story of movement. Grapes crossed borders.
+          People carried traditions across oceans. Cultures reshaped what was
+          planted, produced, and poured.
+        </p>
+        <p class="why-text">
+          YaadWine exists to explore those journeys — because understanding
+          where wine came from means understanding the people who carried it
+          forward.
+        </p>
+        <p class="why-text">
+          History and celebration can sit at the same table.
+        </p>
+      </section>
+
+      <section class="pillars">
+        <p class="section-eyebrow">The Lens</p>
+        <h2>Three ways we look at every bottle</h2>
+
+        <div class="pillar-grid">
+          <div class="pillar-card">
+            <span class="pillar-mark">01</span>
+            <h3>Wine Through Migration</h3>
+            <p>
+              How people moved. How grapes moved. How ideas moved. How cultures
+              mixed and changed each other along the way.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-mark">02</span>
+            <h3>Wine Through Science</h3>
+            <p>
+              Fermentation, microbiology, smoke taint, climate, yeast — the
+              invisible forces that decide what ends up in the glass.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-mark">03</span>
+            <h3>Wine Through Culture</h3>
+            <p>
+              Food, music, art, history, language — the human context that gives
+              a bottle meaning beyond what's in it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="quiz-wrap">
+        <div class="quiz-hero">
+          <h2>Wine Not Find Out?</h2>
+          <p>
+            Five questions. No grape expectations. Let's see what's really in
+            your glass.
+          </p>
+        </div>
+
+        <div class="quiz-card">
+          <div class="quiz-step active" data-step="0">
+            <p class="quiz-progress">Round 1 of 5</p>
+            <p class="quiz-question">
+              It's Friday night. What's actually happening?
+            </p>
+            <button class="quiz-option" data-type="adventurer">
+              Zero plans. I like to wing it, not vine it... wait, I'm doing both
+            </button>
+            <button class="quiz-option" data-type="loyalist">
+              Same spot, same order. If it ain't broke, don't uncork it
+            </button>
+            <button class="quiz-option" data-type="romantic">
+              Home, candles lit, romance-ing myself, honestly
+            </button>
+            <button class="quiz-option" data-type="lifeoftheparty">
+              Wherever the pour is loudest
+            </button>
+          </div>
+
+          <div class="quiz-step" data-step="1">
+            <p class="quiz-progress">Round 2 of 5</p>
+            <p class="quiz-question">
+              Someone asks what you're drinking. Be honest.
+            </p>
+            <button class="quiz-option" data-type="loyalist">
+              I already know what I like. Why mess with a good blend?
+            </button>
+            <button class="quiz-option" data-type="adventurer">
+              Something I can't pronounce and have zero plans to learn
+            </button>
+            <button class="quiz-option" data-type="lifeoftheparty">
+              Whatever's cold. I'm not picky, I'm efficient
+            </button>
+            <button class="quiz-option" data-type="romantic">
+              Something with a backstory. I need a plot, not just a pour
+            </button>
+          </div>
+
+          <div class="quiz-step" data-step="2">
+            <p class="quiz-progress">Round 3 of 5</p>
+            <p class="quiz-question">
+              You're in a wine shop with no plan. What happens?
+            </p>
+            <button class="quiz-option" data-type="adventurer">
+              I ask a stranger to pick for me. Grape leap of faith
+            </button>
+            <button class="quiz-option" data-type="romantic">
+              I read every back label like it owes me an apology
+            </button>
+            <button class="quiz-option" data-type="loyalist">
+              I go straight to my usual aisle. No detours, no drama
+            </button>
+            <button class="quiz-option" data-type="lifeoftheparty">
+              Prettiest label wins. I contain multitudes, none of them deep
+            </button>
+          </div>
+
+          <div class="quiz-step" data-step="3">
+            <p class="quiz-progress">Round 4 of 5</p>
+            <p class="quiz-question">What's your actual wine "ick"?</p>
+            <button class="quiz-option" data-type="lifeoftheparty">
+              People who won't stop talking about tannins mid-party
+            </button>
+            <button class="quiz-option" data-type="loyalist">
+              Being told my go-to is "basic." It's called consistency
+            </button>
+            <button class="quiz-option" data-type="romantic">
+              A bottle with absolutely zero personality. Boring is the real red
+              flag
+            </button>
+            <button class="quiz-option" data-type="adventurer">
+              Playing it safe. I didn't come here to sip it safe
+            </button>
+          </div>
+
+          <div class="quiz-step" data-step="4">
+            <p class="quiz-progress">Round 5 of 5</p>
+            <p class="quiz-question">
+              If your last relationship were a wine, it would be...
+            </p>
+            <button class="quiz-option" data-type="romantic">
+              Complex. Layered. Took forever to open up. Very on-brand
+            </button>
+            <button class="quiz-option" data-type="lifeoftheparty">
+              Fun, fizzy, gone by morning. No notes
+            </button>
+            <button class="quiz-option" data-type="loyalist">
+              Reliable. Aged well. Somehow we're still corked together
+            </button>
+            <button class="quiz-option" data-type="adventurer">
+              A total gamble that somehow, against all odds, decanted
+            </button>
+          </div>
+
+          <div class="quiz-result" data-result="adventurer">
+            <p class="result-tag">Your Wine Personality Is</p>
+            <h2>The Grape Escape</h2>
+            <p>
+              You don't do safe, you do Savagnin. Grape nobody's heard of? Say
+              less, you're already reaching for it. Predictable never lived
+              here. Wine not.
+            </p>
+            <a href="cellar.html" class="quiz-restart">Explore the Cellar</a>
+          </div>
+
+          <div class="quiz-result" data-result="romantic">
+            <p class="result-tag">Your Wine Personality Is</p>
+            <h2>Full-Bodied Feelings</h2>
+            <p>
+              Need a plot, not just a pour. Respect. Bottle with no backstory?
+              Hard pass. You're not drinking wine, you're drinking a whole
+              novel, and you finished the whole thing in one sitting.
+            </p>
+            <a href="cellar.html" class="quiz-restart">Explore the Cellar</a>
+          </div>
+
+          <div class="quiz-result" data-result="loyalist">
+            <p class="result-tag">Your Wine Personality Is</p>
+            <h2>Vintage and Proud</h2>
+            <p>
+              Dang, you found what you like, so say less. You grown, I see you.
+              That's confidence with a corkscrew. Trends are for 20 year olds.
+              Same bottle, every time. Pass the popcorn.
+            </p>
+            <a href="cellar.html" class="quiz-restart">Explore the Cellar</a>
+          </div>
+
+          <div class="quiz-result" data-result="lifeoftheparty">
+            <p class="result-tag">Your Wine Personality Is</p>
+            <h2>Pop, Fizz, Gone</h2>
+            <p>
+              Wine's not the main character for you, the room is. Cold, easy,
+              keeps moving. Say less. Real ones know: that's the healthiest wine
+              relationship on this whole quiz.
+            </p>
+            <a href="cellar.html" class="quiz-restart">Explore the Cellar</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured">
+        <p class="section-eyebrow">Latest Story</p>
+        <h2>Drink Time</h2>
+        <div class="featured-card">
+          <div class="featured-tag">New</div>
+          <h3>A Dream Deferred, A Shirt and A Bunch of Empty Wine Bottles</h3>
+          <p>A Name. A Shirt. No Business Plan.</p>
+          <a
+            href="drink-time-dream-deferred.html"
+            class="btn btn-primary"
+            style="margin-top: 20px; display: inline-block"
+            >Read the story</a
+          >
+        </div>
+      </section>
+
+      <section class="believe">
+        <p class="section-eyebrow">What We Believe</p>
+        <ul class="believe-list">
+          <li>Wine belongs to everyone.</li>
+          <li>Every bottle has a story.</li>
+          <li>History tastes better in a glass.</li>
+          <li>Curiosity matters more than scores.</li>
+          <li>Great wine is about people before prestige.</li>
+          <li>Every bottle is a passport.</li>
+        </ul>
+      </section>
+
+      <section class="closing">
+        <p class="closing-line">
+          Every bottle has a journey.<br />Every journey tells a wine story.
+        </p>
+        <a href="about.html" class="btn btn-primary"
+          >Start with the Manifesto</a
+        >
+      </section>
+    </main>
+
+    <!-- MIGRATE WITH US -->
+    <section class="migrate-section">
+      <div class="migrate-inner">
+        <p class="migrate-eyebrow">Stay Curious</p>
+        <h2 class="migrate-heading">Migrate With Us</h2>
+        <p class="migrate-sub">
+          No scores. No spam. Just stories about wine, movement, and the people
+          behind every bottle — sent when a new one is ready.
+        </p>
+        <form
+          class="migrate-form"
+          id="migrateForm"
+          name="migrate"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="migrate" />
+          <p style="display: none">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+          <input
+            type="email"
+            id="migrateEmail"
+            name="email"
+            placeholder="you@email.com"
+            required
+          />
+          <button type="submit">Migrate With Us</button>
+        </form>
+        <p class="migrate-success" id="migrateSuccess">
+          You're in. See you with the next journey. 🍷
+        </p>
+        <p class="migrate-note">One email. No spam. Unsubscribe anytime.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer-full" id="footer-contact">
+      <div class="footer-full-inner">
+        <div class="footer-brand">
+          <span class="wordmark">YaadWine</span>
+          <p>
+            Every bottle has a journey. New stories arrive when they're ready.
+          </p>
+        </div>
+        <div class="footer-nav-col">
+          <div class="footer-nav-group">
+            <h4>Read</h4>
+            <a href="about.html">Manifesto</a>
+            <a href="cellar.html">Cellar</a>
+            <a href="notebook.html">From YaadWine Crew!</a>
+            <a href="how-we-research.html">How We Research</a>
+          </div>
+          <div class="footer-nav-group">
+            <h4>Connect</h4>
+            <a
+              href="https://instagram.com/yaadwine_"
+              target="_blank"
+              rel="noopener"
+              >Instagram</a
+            >
+            <a
+              href="https://www.linkedin.com/company/yaadwine/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="mailto:yaadwine@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 YaadWine</span>
+        <span>Exploring the world through wine.</span>
+      </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const scores = {
+          adventurer: 0,
+          romantic: 0,
+          loyalist: 0,
+          lifeoftheparty: 0,
+        };
+        let currentStep = 0;
+        const totalSteps = 5;
+        const steps = document.querySelectorAll(".quiz-step");
+        const results = document.querySelectorAll(".quiz-result");
+
+        document.querySelectorAll(".quiz-option").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const type = btn.getAttribute("data-type");
+            scores[type]++;
+            steps[currentStep].classList.remove("active");
+            currentStep++;
+            if (currentStep < totalSteps) {
+              steps[currentStep].classList.add("active");
+            } else {
+              let winner = "adventurer";
+              let max = -1;
+              for (const key in scores) {
+                if (scores[key] > max) {
+                  max = scores[key];
+                  winner = key;
+                }
+              }
+              results.forEach((r) => {
+                if (r.getAttribute("data-result") === winner)
+                  r.classList.add("active");
+              });
+            }
+          });
         });
-      }
-    });
-  });
-});
-</script>
-</body>
+      });
+    </script>
+  </body>
 </html>

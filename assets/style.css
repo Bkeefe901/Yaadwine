@@ -305,25 +305,28 @@ h1, h2, h3 {
   margin: 0 auto;
   margin-top: 20px;
   padding: 100px 32px;
-  background-color: rgb(247, 224, 185);
+  background-color: var(--wine-deep);
 }
 
 .quiz-hero {
   max-width: 620px;
   margin: 0 auto 48px;
   text-align: center;
+  color: var(--white);
 }
 
 .quiz-hero h2 {
   font-size: 36px;
   margin-bottom: 16px;
+  color: var(--white);
 }
 
 .quiz-hero p {
   font-size: 17px;
-  color: var(--ink);
+  color: var(--white);
   opacity: 0.78;
   margin: 0;
+
 }
 
 .quiz-card {
