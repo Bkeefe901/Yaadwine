@@ -25,7 +25,7 @@ exports.handler = async (event, context) => {
   // 3. Draft the notification email for the administrator
   const mailOptions = {
     from: `"Mailing List System" <${process.env.SYSTEM_EMAIL}>`,
-    to: 'admin@yourwebsite.com', // Replace with your actual admin email
+    to: process.env.SYSTEM_EMAIL, // Sends the alert back to the same inbox you already check for Netlify Form signups
     subject: '🚨 Action Required: Remove User from Netlify List',
     text: `A user has requested to unsubscribe.\n\nPlease log into Netlify and delete this email: ${userEmail}`,
     html: `
