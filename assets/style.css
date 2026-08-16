@@ -54,6 +54,51 @@ h1, h2, h3 {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+/* ===================== ANNOUNCEMENT BAR ===================== */
+/* Sits above .site-header on every page — a persistent, low-key nudge
+   toward the newsletter signup that doesn't compete with the main nav
+   links or need its own responsive wrapping logic the way a 4th nav
+   item did. The label just focuses the real form's email input further
+   down the page (id="migrateEmail") — no duplicate form, no popup. */
+.announce-bar {
+  background: var(--wine-deep);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 13.5px;
+}
+
+.announce-bar p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.announce-link {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--gold);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.announce-link:hover { color: var(--white); }
+
+@media (max-width: 500px) {
+  .announce-bar {
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 16px;
+    font-size: 12.5px;
+  }
+}
+
 /* ===================== HEADER ===================== */
 .site-header {
   display: flex;
