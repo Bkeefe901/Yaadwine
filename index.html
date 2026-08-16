@@ -457,6 +457,15 @@
 
         document.querySelectorAll(".quiz-option").forEach((btn) => {
           btn.addEventListener("click", () => {
+            // Fire a GA4 event the first time someone answers a question,
+            // so we can see how many visitors actually engage with the quiz
+            // vs. just scroll past it.
+            if (currentStep === 0 && typeof gtag === "function") {
+              gtag("event", "quiz_start", {
+                event_category: "wine_not_quiz",
+              });
+            }
+
             const type = btn.getAttribute("data-type");
             scores[type]++;
             steps[currentStep].classList.remove("active");
@@ -476,6 +485,17 @@
                 if (r.getAttribute("data-result") === winner)
                   r.classList.add("active");
               });
+
+              // Fire a GA4 event on completion, tagged with which
+              // personality result they landed on. Lets us see completion
+              // rate (quiz_complete count / quiz_start count) and the
+              // distribution across the four results in GA4's Events report.
+              if (typeof gtag === "function") {
+                gtag("event", "quiz_complete", {
+                  event_category: "wine_not_quiz",
+                  result_type: winner,
+                });
+              }
             }
           });
         });
