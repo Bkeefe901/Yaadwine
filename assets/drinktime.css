@@ -4,6 +4,36 @@
   font-weight: 500;
 }
 
+/* Bigger italic beat, for the rare line that deserves more weight than the
+   standard .beat-line — mirrors episode.css's .beat-big treatment used on
+   malbec.html's climactic one-liners. Use sparingly: one or two per piece. */
+.drink-time-essay .beat-line-big {
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--wine-deep);
+  margin: 4px 0 28px;
+}
+
+@media (max-width: 600px) {
+  .drink-time-essay .beat-line-big { font-size: 24px; }
+}
+
+/* Pull-out lines that deserve their own beat — ported from episode.css so
+   Drink Time / Wine Hole pieces can use the same class="pull" convention. */
+.drink-time-essay .pull {
+  font-size: 26px;
+  font-style: italic;
+  color: var(--wine-deep);
+  text-align: center;
+  margin: 36px 0;
+  padding: 0 20px;
+}
+
+@media (max-width: 600px) {
+  .drink-time-essay .pull { font-size: 21px; }
+}
+
 .chapter-heading {
   font-size: 26px;
   color: var(--wine-deep);

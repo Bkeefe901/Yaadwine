@@ -315,7 +315,7 @@ h1, h2, h3 {
 
 .pillar-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 }
 
@@ -605,7 +605,7 @@ a:focus-visible, button:focus-visible {
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 860px) {
   .hero h1 { font-size: 44px; }
-  .pillar-grid { grid-template-columns: 1fr; gap: 32px; }
+  .pillar-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .believe-list { grid-template-columns: 1fr; }
   .main-nav { gap: 14px 20px; flex-wrap: wrap; justify-content: flex-end; }
   .thesis-line { font-size: 21px; }
@@ -616,6 +616,7 @@ a:focus-visible, button:focus-visible {
   .site-header { padding: 24px 20px 0; }
   .hero { padding: 60px 20px 40px; }
   .hero h1 { font-size: 36px; }
+  .pillar-grid { grid-template-columns: 1fr; }
   .hero-sub { font-size: 17px; }
   .why { margin-bottom: 70px; }
   .pillars, .featured, .believe, .closing, .quiz-wrap { padding-left: 20px; padding-right: 20px; }
