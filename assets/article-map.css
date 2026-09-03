@@ -53,7 +53,7 @@
    wildfire taint. Same shape as the .highlighted rules above, different fill. */
 .article-map svg .highlighted-alt,
 .article-map svg .highlighted-alt path {
-  fill: var(--route-teal);
+  fill: var(--gold);
 }
 
 .article-map svg .highlighted-alt:has(path.mainland) path:not(.mainland) {

@@ -31,10 +31,22 @@ function setupMap(el, svgMarkup) {
   // Drop a fresh copy of the map into this container.
   el.innerHTML = svgMarkup;
 
-  // Stop some browsers from giving the <svg> element itself a phantom tab
-  // stop; the countries below manage their own focusability.
   const svg = el.querySelector("svg");
-  if (svg) svg.setAttribute("focusable", "false");
+  if (svg) {
+    // Stop some browsers from giving the <svg> element itself a phantom tab
+    // stop; the countries below manage their own focusability.
+    svg.setAttribute("focusable", "false");
+
+    // The source SVG ships a direct-child <title> ("Simple World Map") and a
+    // <desc> (its CC-BY-SA credit). A direct-child <title> makes browsers pop
+    // a native tooltip on hover, and now that this map is interactive (no
+    // longer aria-hidden) a screen reader would announce the credit too.
+    // Drop both from this injected copy — attribution still lives in the
+    // assets/world-map.svg source file.
+    svg
+      .querySelectorAll(":scope > title, :scope > desc")
+      .forEach((node) => node.remove());
+  }
 
   // --- 1. Highlight countries -------------------------------------------------
   // Two tiers, so a page can visually separate two kinds of relevance — here,
