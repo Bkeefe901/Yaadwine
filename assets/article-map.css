@@ -1,8 +1,11 @@
-/* Reusable world map for articles — shows a couple of countries highlighted,
-   always visible under the article hero (not a hover/tap tooltip). Used on
-   pages that include a <div class="article-map"> block; the actual SVG is
-   injected by article-map.js so it can be reused across articles without
-   copy-pasting the whole map markup onto every page. */
+/* Reusable world map for articles — shows a few countries highlighted,
+   always visible under the article hero. Used on pages with a
+   <div class="article-map"> block; the SVG is injected by article-map.js so
+   it can be reused across articles without copy-pasting the whole map markup.
+
+   A page can optionally add data-tip-<code> attributes to the div; when it
+   does, article-map.js appends the .article-map-caption line below and the
+   named countries become hover/focus/tap interactive (styles further down). */
 
 .article-map {
   max-width: 640px;
@@ -42,4 +45,50 @@
    French Guiana that happen to share the same country group. */
 .article-map svg .highlighted:has(path.mainland) path:not(.mainland) {
   fill: var(--parchment);
+}
+
+/* Secondary highlight tier (data-highlight-alt) — for countries that belong
+   to the story in a different way than the main ones. On the smoke-taint
+   piece: South Africa, where the smoky character is a winemaking choice, not
+   wildfire taint. Same shape as the .highlighted rules above, different fill. */
+.article-map svg .highlighted-alt,
+.article-map svg .highlighted-alt path {
+  fill: var(--route-teal);
+}
+
+.article-map svg .highlighted-alt:has(path.mainland) path:not(.mainland) {
+  fill: var(--parchment);
+}
+
+/* Countries article-map.js has made interactive (it adds tabindex to each).
+   Show a pointer, and give keyboard users a visible focus ring. */
+.article-map svg [tabindex] {
+  cursor: pointer;
+}
+.article-map svg [tabindex]:focus-visible {
+  outline: 2px solid var(--wine-deep);
+  outline-offset: 1px;
+}
+
+/* The country currently hovered / focused / tapped, set by article-map.js.
+   Kept subtle — just a firmer outline so it's clear which country the caption
+   below is describing. Covers both single-path countries and <g> groups. */
+.article-map svg .tip-active,
+.article-map svg .tip-active path {
+  stroke: var(--wine-deep);
+  stroke-width: 1.5;
+}
+
+/* Caption line under the map, populated by article-map.js on hover/focus/tap.
+   Only rendered on pages that set data-tip-* attributes. min-height reserves
+   room for two lines so the layout doesn't jump as the text swaps. */
+.article-map-caption {
+  margin: 14px 0 0;
+  min-height: 2.8em;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ink);
+  opacity: 0.75;
+  text-align: center;
 }
