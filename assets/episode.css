@@ -99,6 +99,15 @@
   margin: 4px 0 28px;
 }
 
+.beat-alt {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--wine-deep);
+  margin: 0px;
+  margin-bottom: 0px;
+  font-style: italic;
+}
+
 /* Playful asides, in a lighter quieter voice */
 .aside {
   font-family: var(--font-body);
