@@ -386,6 +386,15 @@ h1, h2, h3 {
   margin: 0;
 }
 
+/* .quiz-hero p above is more specific than .section-eyebrow alone, so
+   without this override the eyebrow would render white/faded instead of
+   gold like every other eyebrow on the site. */
+.quiz-hero .section-eyebrow {
+  color: var(--gold);
+  opacity: 1;
+  margin: 0 0 16px;
+}
+
 /* The JS toggles .active on one step/result at a time — without this,
    every question and every result renders stacked on the page at once. */
 .quiz-step,
@@ -460,7 +469,18 @@ h1, h2, h3 {
 .quiz-result h2 {
   color: var(--wine);
   font-size: 30px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+}
+
+/* Sits between the region name and the description — the new region-match
+   results carry a subtitle the old personality-type results didn't have. */
+.result-subtitle {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--wine);
+  opacity: 0.65;
+  margin: 0 0 20px;
 }
 
 .quiz-result p {
@@ -468,6 +488,33 @@ h1, h2, h3 {
   color: var(--wine);
   opacity: 0.85;
   margin: 0 0 28px;
+}
+
+/* The trivia line at the bottom of each region result. Divider + small-caps
+   label echoes .quiz-progress above the question, so the result card reads
+   as the same system rather than a bolted-on addition. */
+.quiz-fact-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: -8px 0 10px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.quiz-fact {
+  font-size: 15px;
+  color: var(--wine);
+  opacity: 0.85;
+  margin: 0 0 28px;
+}
+
+.quiz-result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .quiz-restart {
@@ -481,6 +528,24 @@ h1, h2, h3 {
   transition: all 0.2s ease;
 }
 .quiz-restart:hover { background: var(--wine); }
+
+/* Secondary action next to Explore the Cellar — outlined rather than
+   filled so the Cellar link (the one we actually want people to click)
+   stays the visually stronger of the two. */
+.quiz-retry {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  background: none;
+  border: 1.5px solid var(--wine-deep);
+  color: var(--wine-deep);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.quiz-retry:hover { background: var(--wine-deep); color: var(--white); }
 
 
 /* ===================== FEATURED / SIGNATURE SERIES ===================== */
