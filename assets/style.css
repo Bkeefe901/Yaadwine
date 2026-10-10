@@ -37,6 +37,28 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
+/* Links inside story text. The reset above strips every link's styling
+   (right for nav, buttons, cards), but a link mid-sentence needs to look
+   clickable. Scoped to the story bodies of all three page types — episode
+   (.episode-body), Drink Time / prose (.essay) — so nav and footer links
+   are untouched. Wine color + a gold underline keeps it on-palette; the
+   underline darkens on hover so it reacts like a link. */
+.essay p a,
+.episode-body p a {
+  color: var(--wine);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px; /* drops the line below descenders (p, y, g) */
+  transition: text-decoration-color 0.2s ease;
+}
+
+.essay p a:hover,
+.episode-body p a:hover {
+  text-decoration-color: var(--wine);
+}
+
 h1, h2, h3 {
   font-family: var(--font-display);
   color: var(--wine-deep);
