@@ -344,6 +344,7 @@ h1, h2, h3 {
 .pillar-card {
   border-top: 2px solid var(--gold);
   padding-top: 24px;
+  position: relative; /* anchor for the absolutely-positioned hover dropdown */
 }
 
 .pillar-mark {
@@ -364,6 +365,65 @@ h1, h2, h3 {
   font-size: 15.5px;
   opacity: 0.78;
   margin: 0;
+}
+
+/* ------ Pillar hover dropdown ------ */
+/* Each card has an absolutely-positioned dropdown that fades in on hover.
+   It's a child of .pillar-card so hovering over the dropdown itself
+   keeps the parent :hover state alive — no JS needed. */
+.pillar-dropdown {
+  position: absolute;
+  top: 100%; /* flush against the card bottom — no gap to break hover */
+  left: 0;
+  width: 100%;
+  min-width: 200px;
+  background: var(--white);
+  border-left: 3px solid var(--gold);
+  box-shadow: 0 4px 20px rgba(28, 36, 32, 0.09);
+  padding: 8px 0 6px; /* top padding creates visual gap without breaking hover */
+  z-index: 50;
+  /* hidden by default — fades and slides up 6px into position on hover */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.pillar-card:hover {
+  cursor: default; /* card itself isn't a link, but signal interactivity */
+}
+
+.pillar-card:hover .pillar-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.pillar-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pillar-dropdown li a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.pillar-dropdown li a:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+/* Mobile: hover doesn't exist on touch devices, so we hide the dropdown
+   and show a plain link to the matching cellar section instead. */
+.pillar-mobile-link {
+  display: none;
 }
 
 /* ===================== WINE NOT? QUIZ ===================== */
@@ -697,6 +757,19 @@ a:focus-visible, button:focus-visible {
   .main-nav { gap: 14px 20px; flex-wrap: wrap; justify-content: flex-end; }
   .thesis-line { font-size: 21px; }
   .quiz-card { padding: 36px; }
+
+  /* Swap hover dropdown for a plain cellar link on tablet/mobile */
+  .pillar-dropdown { display: none; }
+  .pillar-mobile-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .pillar-mobile-link:hover { text-decoration: underline; }
 }
 
 @media (max-width: 500px) {
