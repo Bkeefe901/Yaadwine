@@ -87,6 +87,13 @@
   margin-top: 14px;
 }
 
+/* The "Prefer Substack?" link. The global `a` reset strips underlines,
+   so without this the link is indistinguishable from the note text. */
+.migrate-note a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .migrate-success {
   font-family: var(--font-body);
   font-size: 15px;

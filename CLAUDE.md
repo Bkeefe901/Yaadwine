@@ -64,6 +64,35 @@ The unsubscribe link a subscriber clicks has this shape:
 https://yaadwine.com/.netlify/functions/unsubscribe?email=<their-address>
 ```
 
+## New article checklist
+
+New stories usually arrive as a draft `.html` file written outside this repo. These drafts have consistently been missing the GA4 snippet and the site chrome, and sometimes use class names that don't exist in the stylesheets — so treat a draft as content to move into the right page template, not as a finished page. Keep the author's wording exactly; only change markup. Don't add `<strong>` tags the author didn't write.
+
+**Page shell** — copy from the closest existing page of the same type (see the page-type table above; `malbec.html` / `smoke-taint.html` for episodes, `wine-bars-gone.html` for Drink Time):
+- [ ] GA4 `gtag.js` snippet at the top of `<head>`
+- [ ] Correct stylesheets for the page type, `footer.css` last
+- [ ] `.announce-bar`, logo `.site-header`, `.migrate-section`, full `.site-footer-full` (including the Substack link)
+- [ ] Drink Time: wine details go in a `.wine-card`; closes with `.essay-close` ("Until my next bottle, Ta Ta.") + `.convo-starter`
+- [ ] Episodes: `.stamp-row` in the hero and again in `.episode-close`; an `.article-map` with `data-highlight` / `data-tip-*` plus `article-map.css` and `article-map.js` when the story spans countries
+- [ ] Image paths match the filename's exact case (Netlify is case-sensitive; macOS isn't, so a mismatch only breaks on the live site)
+
+**Head tags** — `PAGE-PATH` is the clean URL without `.html` (e.g. `/chenin-blanc`; Netlify serves `chenin-blanc.html` at that path):
+- [ ] `og:image` as a full URL: `https://yaadwine.com/assets/og-image.png`
+- [ ] `<link rel="canonical" href="https://yaadwine.com/PAGE-PATH">`
+- [ ] `<meta property="og:url" content="https://yaadwine.com/PAGE-PATH">`
+- [ ] Article JSON-LD block before `</head>` (headline, author Taniesha Keefe, publisher YaadWine, `datePublished`, `mainEntityOfPage`) — copy from any existing article
+
+**In the article:**
+- [ ] Byline under the headline/subtitle, above any stamps: `<p class="article-meta">By Taniesha Keefe &middot; <time datetime="YYYY-MM-DD">Month D, YYYY</time></p>`
+- [ ] `.share-row` ("Pass it on") just before `</main>`, with that page's URL and title URL-encoded in the LinkedIn, Facebook and mailto links
+
+**Elsewhere on the site:**
+- [ ] Card in the matching `cellar.html` pillar section, appended last (cards run oldest → newest)
+- [ ] Home page "Latest Story" `.featured` card in `index.html` points to the new page
+- [ ] `<url>` entry in `sitemap.xml` with the publish date as `<lastmod>`
+
+`404.html` is the exception to the head-tag rules: no canonical, `og:url` or sitemap entry, so Google doesn't index the error page.
+
 ## Planned work: mail-merge send workflow
 
 The unsubscribe function itself is built and confirmed working end-to-end (deployed, tested with a real click-through and admin alert). What's **not yet implemented** is personalizing that `?email=` parameter per recipient when sending a new story — right now there's no way to send one email with each subscriber's own address baked into their unsubscribe link.

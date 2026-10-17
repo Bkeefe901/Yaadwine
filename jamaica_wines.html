@@ -31,7 +31,9 @@
       property="og:description"
       content="How Roots, Rocks, and Sweet Wine Became Jamaican. Movement. Science. Culture."
     />
-    <meta property="og:image" content="assets/og-image.png" />
+    <meta property="og:image" content="https://yaadwine.com/assets/og-image.png" />
+    <link rel="canonical" href="https://yaadwine.com/jamaica_wines" />
+    <meta property="og:url" content="https://yaadwine.com/jamaica_wines" />
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,6 +46,25 @@
     <link rel="stylesheet" href="assets/episode.css" />
     <link rel="stylesheet" href="assets/article-map.css" />
     <link rel="stylesheet" href="assets/footer.css" />
+    <!-- Article structured data: lets Google show author + date in search results. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How Roots, Rocks, and Sweet Wine Became Jamaican",
+      "author": {
+        "@type": "Person",
+        "name": "Taniesha Keefe"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "YaadWine",
+        "url": "https://yaadwine.com"
+      },
+      "datePublished": "2026-08-08",
+      "mainEntityOfPage": "https://yaadwine.com/jamaica_wines"
+    }
+    </script>
   </head>
   <body>
     <div class="grain"></div>
@@ -75,6 +96,7 @@
         <p class="eyebrow">Wine Through Culture</p>
         <h1>How Roots, Rocks,<br />and Sweet Wine<br />Became Jamaican</h1>
         <p class="episode-subtitle">The World in a Bottle</p>
+        <p class="article-meta">By Taniesha Keefe &middot; <time datetime="2026-08-08">August 8, 2026</time></p>
         <div class="stamp-row">
           <span class="stamp">LONDON</span>
           <span class="stamp-line"></span>
@@ -1071,6 +1093,15 @@
           ><a href="https://instagram.com/yaadwine_">@yaadwine_</a></b
         >
       </section>
+      <!-- Share links: plain URLs, no third-party scripts. The page URL
+           and title are URL-encoded so they survive being passed along. -->
+      <div class="share-row">
+        <p class="share-label">Pass it on</p>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fyaadwine.com%2Fjamaica_wines" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyaadwine.com%2Fjamaica_wines" target="_blank" rel="noopener">Facebook</a>
+        <a href="mailto:?subject=How%20Roots%2C%20Rocks%2C%20and%20Sweet%20Wine%20Became%20Jamaican&amp;body=https%3A%2F%2Fyaadwine.com%2Fjamaica_wines">Email</a>
+      </div>
+
     </main>
 
     <!-- MIGRATE WITH US -->
@@ -1140,6 +1171,7 @@
               rel="noopener"
               >LinkedIn</a
             >
+            <a href="https://yaadwine.substack.com" target="_blank" rel="noopener">Substack</a>
             <a href="mailto:yaadwine@gmail.com">Email</a>
           </div>
         </div>

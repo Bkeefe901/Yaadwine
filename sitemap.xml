@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Every public page, using the same clean URLs as each page's canonical tag.
+  When a new story goes live, add a <url> block for it here (with its publish
+  date as <lastmod>) so search engines find it sooner. 404.html is left out
+  on purpose. The quiz lives on the homepage, so the "/" entry covers it.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main pages -->
+  <url><loc>https://yaadwine.com/</loc></url>
+  <url><loc>https://yaadwine.com/about</loc></url>
+  <url><loc>https://yaadwine.com/cellar</loc></url>
+  <url><loc>https://yaadwine.com/notebook</loc></url>
+  <url><loc>https://yaadwine.com/how-we-research</loc></url>
+
+  <!-- Articles (lastmod = publish date) -->
+  <url><loc>https://yaadwine.com/malbec</loc><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://yaadwine.com/drink-time-grolleau</loc><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://yaadwine.com/jamaica_wines</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://yaadwine.com/drink-time-dream-deferred</loc><lastmod>2026-08-15</lastmod></url>
+  <url><loc>https://yaadwine.com/wine-hole-coferments</loc><lastmod>2026-08-22</lastmod></url>
+  <url><loc>https://yaadwine.com/smoke-taint</loc><lastmod>2026-09-05</lastmod></url>
+  <url><loc>https://yaadwine.com/wine-bars-gone</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://yaadwine.com/japan-pinot-noir</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://yaadwine.com/chenin-blanc</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://yaadwine.com/wine-inflation</loc><lastmod>2026-10-10</lastmod></url>
+</urlset>

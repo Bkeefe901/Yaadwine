@@ -31,7 +31,9 @@
       property="og:description"
       content="Wine Through Migration, Episode 1. A grape France gave up on became Argentina's national identity — and it's not the story you think."
     />
-    <meta property="og:image" content="assets/og-image.png" />
+    <meta property="og:image" content="https://yaadwine.com/assets/og-image.png" />
+    <link rel="canonical" href="https://yaadwine.com/malbec" />
+    <meta property="og:url" content="https://yaadwine.com/malbec" />
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,6 +46,25 @@
     <link rel="stylesheet" href="assets/episode.css" />
     <link rel="stylesheet" href="assets/article-map.css" />
     <link rel="stylesheet" href="assets/footer.css" />
+    <!-- Article structured data: lets Google show author + date in search results. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How Malbec Left France and Became Argentina",
+      "author": {
+        "@type": "Person",
+        "name": "Taniesha Keefe"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "YaadWine",
+        "url": "https://yaadwine.com"
+      },
+      "datePublished": "2026-08-01",
+      "mainEntityOfPage": "https://yaadwine.com/malbec"
+    }
+    </script>
   </head>
   <body>
     <div class="grain"></div>
@@ -74,6 +95,7 @@
       <section class="episode-hero">
         <p class="eyebrow">Wine Through Migration — Episode 1</p>
         <h1>Why Malbec Got<br />Kicked Out of France</h1>
+        <p class="article-meta">By Taniesha Keefe &middot; <time datetime="2026-08-01">August 1, 2026</time></p>
         <div class="stamp-row" aria-hidden="true">
           <span class="stamp">CAHORS</span>
           <span class="stamp-line"></span>
@@ -415,6 +437,15 @@
           ><a href="https://instagram.com/yaadwine_">@yaadwine_</a></b
         >
       </section>
+      <!-- Share links: plain URLs, no third-party scripts. The page URL
+           and title are URL-encoded so they survive being passed along. -->
+      <div class="share-row">
+        <p class="share-label">Pass it on</p>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fyaadwine.com%2Fmalbec" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyaadwine.com%2Fmalbec" target="_blank" rel="noopener">Facebook</a>
+        <a href="mailto:?subject=How%20Malbec%20Left%20France%20and%20Became%20Argentina&amp;body=https%3A%2F%2Fyaadwine.com%2Fmalbec">Email</a>
+      </div>
+
     </main>
 
     <!-- MIGRATE WITH US -->
@@ -484,6 +515,7 @@
               rel="noopener"
               >LinkedIn</a
             >
+            <a href="https://yaadwine.substack.com" target="_blank" rel="noopener">Substack</a>
             <a href="mailto:yaadwine@gmail.com">Email</a>
           </div>
         </div>

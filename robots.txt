@@ -1,0 +1,8 @@
+# Let every crawler read the whole site...
+User-agent: *
+# ...except Netlify Functions. The only one is the unsubscribe endpoint,
+# which has nothing to index and sends the site owner an alert email
+# every time it's hit.
+Disallow: /.netlify/
+
+Sitemap: https://yaadwine.com/sitemap.xml
