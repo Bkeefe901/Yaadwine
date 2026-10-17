@@ -14,6 +14,7 @@
   --ink: #1C2420;
   --route-teal: #4E6B5C;
   --white: #FFFFFF;
+  --miss: #9A3B3B; /* muted brick red, only for "wrong answer" states (heist quiz) */
 
   --font-display: "Fraunces", serif;
   --font-body: "Inter", sans-serif;
@@ -554,17 +555,6 @@ h1, h2, h3 {
   margin-bottom: 8px;
 }
 
-/* Sits between the region name and the description — the new region-match
-   results carry a subtitle the old personality-type results didn't have. */
-.result-subtitle {
-  font-family: var(--font-body);
-  font-style: italic;
-  font-size: 15px;
-  color: var(--wine);
-  opacity: 0.65;
-  margin: 0 0 20px;
-}
-
 .quiz-result p {
   font-size: 16px;
   color: var(--wine);
@@ -572,25 +562,90 @@ h1, h2, h3 {
   margin: 0 0 28px;
 }
 
-/* The trivia line at the bottom of each region result. Divider + small-caps
-   label echoes .quiz-progress above the question, so the result card reads
-   as the same system rather than a bolted-on addition. */
-.quiz-fact-label {
-  font-size: 12px;
+/* "Score: 3 of 5" under the rank name. Small caps + gold to match
+   .quiz-progress, so it reads as a label rather than body text. The
+   higher-specificity selector beats .quiz-result p above. */
+.quiz-result .quiz-score {
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--gold);
-  margin: -8px 0 10px;
-  padding-top: 20px;
+  opacity: 1;
+  margin: 0 0 16px;
+}
+
+/* ---- Receipts: the answer reveal under the result ----
+   Hidden until the quiz ends. Gets the same parchment panel as the active
+   step/result above it, so the two read as one continuous card. */
+.quiz-receipts {
+  display: none;
+}
+.quiz-receipts.active {
+  display: block;
+  background-color: var(--parchment);
+  padding: 10px;
+  color: var(--wine);
+}
+
+.quiz-receipts h3 {
+  font-size: 22px;
+  color: var(--wine);
+  margin: 36px 0 20px;
+  padding-top: 28px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.quiz-fact {
+.receipt { margin-bottom: 24px; }
+
+.receipt-q {
+  font-weight: 600;
   font-size: 15px;
-  color: var(--wine);
+  margin: 0 0 4px;
+}
+
+.receipt-a {
+  font-size: 15px;
+  line-height: 1.65;
   opacity: 0.85;
-  margin: 0 0 28px;
+  margin: 4px 0;
+}
+
+/* "You got / missed this one." The JS adds .right or .miss after scoring. */
+.receipt-mark { font-weight: 600; }
+.receipt-mark.right { color: var(--gold); }
+.receipt-mark.miss { color: var(--miss); }
+
+/* Merch plug at the top of the Receipts: a white box so it stands apart
+   from the answers without breaking the parchment panel. */
+.quiz-merch {
+  text-align: center;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 24px;
+  margin-top: 8px;
+}
+
+.quiz-merch-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.quiz-merch p:not(.quiz-merch-title) {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin: 0 0 20px;
+}
+
+.quiz-note {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--gold);
+  margin: 28px 0 20px;
 }
 
 .quiz-result-actions {

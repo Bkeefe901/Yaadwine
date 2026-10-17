@@ -211,203 +211,261 @@
         </div>
       </section>
 
+      <!-- "Drunk Stole My Wine" trivia quiz. Unlike the old personality quiz,
+           each answer is right or wrong (data-correct="1" marks the right
+           one), the score picks one of four detective ranks, and the
+           Receipts block below reveals the real story behind every question.
+           Keep id="quiz": newsletter emails link straight to #quiz. -->
       <section class="quiz-wrap" id="quiz">
         <div class="quiz-card">
           <div class="quiz-hero">
-            <p class="section-eyebrow">Wine Not Find Out?</p>
-            <h2>Where in the Wine World Are You?</h2>
+            <p class="section-eyebrow">The Wine Hole</p>
+            <h2>Drunk Stole My Wine</h2>
             <p>
-              Five questions. No grape expectations. Let's see where your
-              glass really belongs.
+              Five questions about real wine heists. How good a wine detective
+              are you?
             </p>
           </div>
 
           <div class="quiz-step active" data-step="0">
             <p class="quiz-progress">Round 1 of 5</p>
             <p class="quiz-question">
-              You suddenly have an entire Saturday with absolutely nothing
-              planned. What are you doing?
+              When did thieves hit the wine cellar at The French Laundry in
+              2014?
             </p>
-            <button class="quiz-option" data-type="A">
-              Disappearing somewhere quiet where nobody can bother me
-            </button>
-            <button class="quiz-option" data-type="B">
-              Finding somewhere with people, food, music, something happening
-            </button>
-            <button class="quiz-option" data-type="C">
-              Wandering around an old neighborhood, museum, market, somewhere
-              with a story
-            </button>
-            <button class="quiz-option" data-type="D">
-              Trying something I've never done before
-            </button>
+            <button class="quiz-option" data-correct="0">New Year's Eve</button>
+            <button class="quiz-option" data-correct="1">Christmas Day</button>
+            <button class="quiz-option" data-correct="0">Thanksgiving night</button>
+            <button class="quiz-option" data-correct="0">Valentine's Day</button>
           </div>
 
           <div class="quiz-step" data-step="1">
             <p class="quiz-progress">Round 2 of 5</p>
-            <p class="quiz-question">Pick a vacation:</p>
-            <button class="quiz-option" data-type="A">
-              A remote island most people I know haven't visited
+            <p class="quiz-question">
+              Atrio, a Spanish hotel and restaurant with two Michelin stars at
+              the time, lost 45 bottles, including an 1806 Château d'Yquem. How
+              did the thieves reach the cellar?
+            </p>
+            <button class="quiz-option" data-correct="0">
+              They dug a tunnel from the parking lot
             </button>
-            <button class="quiz-option" data-type="B">
-              Somewhere hot, lively and always in motion
+            <button class="quiz-option" data-correct="0">
+              They posed as delivery drivers on a Monday morning
             </button>
-            <button class="quiz-option" data-type="C">
-              Somewhere ancient, with history under every street
+            <button class="quiz-option" data-correct="1">
+              They checked in as a refined couple, had dinner, then slipped in
+              while staff were distracted
             </button>
-            <button class="quiz-option" data-type="D">
-              Somewhere cold, quiet and a little unexpected
+            <button class="quiz-option" data-correct="0">
+              They cut the power and climbed through a window
             </button>
           </div>
 
           <div class="quiz-step" data-step="2">
             <p class="quiz-progress">Round 3 of 5</p>
             <p class="quiz-question">
-              Your plans completely fall apart at the last minute. What's your
-              move?
+              A maintenance technician at Burgundy wine estates was caught on
+              camera taking four bottles. Police then searched his home and his
+              mother's. What had he done with the wine he stole?
             </p>
-            <button class="quiz-option" data-type="A">
-              Fine. I'll make my own little world over here.
+            <button class="quiz-option" data-correct="0">
+              Sold them to collectors overseas
             </button>
-            <button class="quiz-option" data-type="B">
-              New plan. We're still going out.
+            <button class="quiz-option" data-correct="0">
+              Drunk his way through the cellar
             </button>
-            <button class="quiz-option" data-type="C">
-              I already know three backup options.
+            <button class="quiz-option" data-correct="1">
+              Kept them all, and never sold or drank a bottle
             </button>
-            <button class="quiz-option" data-type="D">
-              Interesting. Let's see where this takes us.
+            <button class="quiz-option" data-correct="0">
+              Buried them in a vineyard
             </button>
           </div>
 
           <div class="quiz-step" data-step="3">
             <p class="quiz-progress">Round 4 of 5</p>
             <p class="quiz-question">
-              You arrive in a city you've never been to. What catches your
-              attention first?
+              In October 2026, thieves hit a Marchesi Antinori cellar near
+              Cortona, in Tuscany. About how many bottles were taken?
             </p>
-            <button class="quiz-option" data-type="A">
-              The landscape. I want to see what's beyond the city.
-            </button>
-            <button class="quiz-option" data-type="B">
-              Where everybody is hanging out.
-            </button>
-            <button class="quiz-option" data-type="C">
-              The old buildings and the stories behind them.
-            </button>
-            <button class="quiz-option" data-type="D">
-              The thing the city does that I haven't seen anywhere else.
-            </button>
+            <button class="quiz-option" data-correct="0">300</button>
+            <button class="quiz-option" data-correct="0">3,000</button>
+            <button class="quiz-option" data-correct="1">30,000</button>
+            <button class="quiz-option" data-correct="0">300,000</button>
           </div>
 
           <div class="quiz-step" data-step="4">
             <p class="quiz-progress">Round 5 of 5</p>
             <p class="quiz-question">
-              Pick the sentence that sounds most like you:
+              In February 2020, burglars broke through the cellar wall of
+              Formel B, a Michelin-starred restaurant in Copenhagen, and took
+              roughly 50 to 60 bottles. Some of them later turned up. How?
             </p>
-            <button class="quiz-option" data-type="A">
-              I don't need a lot of space. I just need my space.
+            <button class="quiz-option" data-correct="1">
+              A wine dealer in Germany offered them for sale
             </button>
-            <button class="quiz-option" data-type="B">
-              I have no idea how I got this much done today.
+            <button class="quiz-option" data-correct="0">
+              The burglars mailed them back with an apology
             </button>
-            <button class="quiz-option" data-type="C">
-              There's probably a story behind that.
+            <button class="quiz-option" data-correct="0">
+              They surfaced at a London auction
             </button>
-            <button class="quiz-option" data-type="D">
-              Okay, but what happens if we do it differently?
+            <button class="quiz-option" data-correct="0">
+              A sommelier recognized one at a dinner party
             </button>
           </div>
 
-          <div class="quiz-result" data-result="A">
-            <p class="result-tag">Your Wine World Is</p>
-            <h2>Pico Island, Azores</h2>
-            <p class="result-subtitle">The Protected One</p>
+          <!-- One result per score tier. The script fills in .score-num and
+               shows whichever tier matches: 5 = top, 3–4 = good, 1–2 = low,
+               0 = zero. -->
+          <div class="quiz-result" data-result="top">
+            <p class="result-tag">Your Detective Rank Is</p>
+            <h2>Master Somm-eye</h2>
+            <p class="quiz-score">Score: <span class="score-num">0</span> of 5</p>
             <p>
-              You don't need ideal conditions to thrive, you just need the
-              right walls around you. Small, resilient, and quietly
-              prestigious once people actually taste what you're made of.
+              You cracked every case. Nothing leaves this cellar without you
+              knowing about it. Wine not lock the door behind you?
             </p>
-            <p class="quiz-fact-label">Real Fact</p>
-            <p class="quiz-fact">
-              Pico's vines grow in tiny plots called currais, walled in by
-              black volcanic rock to block Atlantic wind and salt spray. The
-              whole landscape is a UNESCO World Heritage Site. The wine was
-              once so prized it was served to Russian tsars, and one producer
-              still calls itself "Czar" in honor of that history.
+          </div>
+          <div class="quiz-result" data-result="good">
+            <p class="result-tag">Your Detective Rank Is</p>
+            <h2>Sergeant Sauvignon</h2>
+            <p class="quiz-score">Score: <span class="score-num">0</span> of 5</p>
+            <p>
+              You know your heists. A couple of bottles slipped past you, but
+              you'd still make the arrest.
             </p>
-            <div class="quiz-result-actions">
-              <button type="button" class="quiz-retry">
-                Take the Quiz Again
-              </button>
-              <a href="cellar.html" class="quiz-restart">Explore the Cellar</a>
+          </div>
+          <div class="quiz-result" data-result="low">
+            <p class="result-tag">Your Detective Rank Is</p>
+            <h2>Rosé-Colored Glasses Detective</h2>
+            <p class="quiz-score">Score: <span class="score-num">0</span> of 5</p>
+            <p>
+              You've got instincts. Study the receipts below, then come back
+              and take another run at it.
+            </p>
+          </div>
+          <div class="quiz-result" data-result="zero">
+            <p class="result-tag">Your Detective Rank Is</p>
+            <h2>Château Gullible</h2>
+            <p class="quiz-score">Score: <span class="score-num">0</span> of 5</p>
+            <p>
+              The thieves would love to meet you. Read the receipts below,
+              they're the good part.
+            </p>
+          </div>
+
+          <!-- Shown under whichever result is active once the quiz ends.
+               The script writes "You got / missed this one." into each
+               .receipt-mark based on the reader's answers. -->
+          <div class="quiz-receipts" id="quizReceipts">
+            <div class="quiz-merch">
+              <p class="quiz-merch-title">Cozy season is here.</p>
+              <p>
+                Drunk Stole My Wine is also a sweatshirt and a tee. Get
+                yourself a gift and/or give one to a friend because you have
+                been robbed :)
+              </p>
+              <a
+                href="https://bktekshirts.com/pages/gifts-for-wine-lovers"
+                target="_blank"
+                rel="noopener"
+                class="quiz-restart"
+                id="merchLink"
+                >Shop the Merch Store</a
+              >
             </div>
-          </div>
 
-          <div class="quiz-result" data-result="B">
-            <p class="result-tag">Your Wine World Is</p>
-            <h2>Vale do São Francisco, Brazil</h2>
-            <p class="result-subtitle">The Nonstop One</p>
-            <p>
-              You don't wait for the "right season." You just keep going.
-              Abundant, tropical, a little relentless in the best way.
-            </p>
-            <p class="quiz-fact-label">Real Fact</p>
-            <p class="quiz-fact">
-              This hot, tropical Brazilian region can produce two full wine
-              harvests in a single year, something almost no classic wine
-              region on earth can do.
-            </p>
-            <div class="quiz-result-actions">
-              <button type="button" class="quiz-retry">
-                Take the Quiz Again
-              </button>
-              <a href="cellar.html" class="quiz-restart">Explore the Cellar</a>
+            <h3>The Receipts</h3>
+            <div class="receipt" data-receipt="0">
+              <p class="receipt-q">
+                1. When did thieves hit the wine cellar at The French Laundry
+                in 2014?
+              </p>
+              <p class="receipt-a"><span class="receipt-mark"></span></p>
+              <p class="receipt-a">
+                <strong>Christmas Day, 2014.</strong> The Napa Valley
+                restaurant was closed for renovations when thieves took about
+                110 bottles worth nearly $550,000, including Domaine de la
+                Romanée-Conti, which can run up to $10,000 a bottle. Across
+                three California businesses, the FBI plea agreement valued the
+                haul at more than $870,000.
+              </p>
             </div>
-          </div>
-
-          <div class="quiz-result" data-result="C">
-            <p class="result-tag">Your Wine World Is</p>
-            <h2>Meknes, Morocco</h2>
-            <p class="result-subtitle">The Quiet Backbone</p>
-            <p>
-              You're not the flashiest name in the room, but you're doing
-              most of the actual work. Deep roots, ancient history, and
-              nobody realizes how much you're really carrying.
-            </p>
-            <p class="quiz-fact-label">Real Fact</p>
-            <p class="quiz-fact">
-              Winegrowing near Meknes dates back to antiquity, and today the
-              region alone accounts for roughly 60% of all Moroccan wine
-              production.
-            </p>
-            <div class="quiz-result-actions">
-              <button type="button" class="quiz-retry">
-                Take the Quiz Again
-              </button>
-              <a href="cellar.html" class="quiz-restart">Explore the Cellar</a>
+            <div class="receipt" data-receipt="1">
+              <p class="receipt-q">
+                2. Atrio, a Spanish hotel and restaurant with two Michelin stars
+                at the time, lost 45 bottles, including an 1806 Château
+                d'Yquem. How did the thieves reach the cellar?
+              </p>
+              <p class="receipt-a"><span class="receipt-mark"></span></p>
+              <p class="receipt-a">
+                <strong>They checked in as guests, had dinner, then slipped in
+                while staff were distracted.</strong> The pair asked a clerk for
+                more food. While he was in the kitchen, the man slipped into
+                the cellar. Nobody noticed the bottles were missing until later.
+                Two suspects were arrested in Croatia in 2022. In March 2023 a
+                Spanish court sentenced them to four and four and a half years
+                in prison and ordered them to pay about €753,000 to the
+                restaurant's insurer. None of the bottles has been recovered,
+                and both deny the crime.
+              </p>
             </div>
-          </div>
+            <div class="receipt" data-receipt="2">
+              <p class="receipt-q">
+                3. A maintenance technician at Burgundy wine estates was caught
+                on camera taking four bottles. Police then searched his home
+                and his mother's. What had he done with the wine he stole?
+              </p>
+              <p class="receipt-a"><span class="receipt-mark"></span></p>
+              <p class="receipt-a">
+                <strong>He kept them all.</strong> Police found about 8,000
+                stolen bottles at his home and his mother's. Bank records showed
+                no sales, and the bottles went back intact to their owners. The
+                court called him "half-kleptomaniac, half-collector" and gave
+                him a 12-month suspended sentence and a €10,000 fine. One owner,
+                Albert Bichot, asked for a symbolic €1.
+              </p>
+            </div>
+            <div class="receipt" data-receipt="3">
+              <p class="receipt-q">
+                4. In October 2026, thieves hit a Marchesi Antinori cellar near
+                Cortona, in Tuscany. About how many bottles were taken?
+              </p>
+              <p class="receipt-a"><span class="receipt-mark"></span></p>
+              <p class="receipt-a">
+                <strong>About 30,000 bottles.</strong> Reports put the haul at
+                roughly €5 million. At least seven masked people reportedly
+                switched off the alarm and cameras, then used two trucks and
+                the winery's own forklifts. As of October 16, 2026, no arrests
+                have been reported. This story is still developing.
+              </p>
+            </div>
+            <div class="receipt" data-receipt="4">
+              <p class="receipt-q">
+                5. In February 2020, burglars broke through the cellar wall of
+                Formel B, a Michelin-starred restaurant in Copenhagen, and took
+                roughly 50 to 60 bottles. Some of them later turned up. How?
+              </p>
+              <p class="receipt-a"><span class="receipt-mark"></span></p>
+              <p class="receipt-a">
+                <strong>A wine dealer near Stuttgart, Germany, offered them for
+                sale.</strong> The thieves had knocked a hole in the cellar wall
+                from the wine shop next door. The dealer was selling the bottles
+                for a woman who said she had bought them from someone else, and
+                Danish police announced that about a third of the stolen wine
+                had been recovered. As of 2023 reports, no one had been
+                convicted and the rest of the bottles were still missing.
+              </p>
+            </div>
 
-          <div class="quiz-result" data-result="D">
-            <p class="result-tag">Your Wine World Is</p>
-            <h2>Hokkaido, Japan</h2>
-            <p class="result-subtitle">The Cool-Headed One</p>
-            <p>
-              While everyone else chases heat and sun, you thrive in the
-              cold. Precise, adaptable, quietly ahead of the curve.
-            </p>
-            <p class="quiz-fact-label">Real Fact</p>
-            <p class="quiz-fact">
-              Japan's northernmost island has become a serious cold-climate
-              Pinot Noir region, something climate scientists specifically
-              point to as conditions shift.
+            <p class="quiz-note">
+              Every bottle has a journey. Some of them take a detour through a
+              getaway truck.
             </p>
             <div class="quiz-result-actions">
-              <button type="button" class="quiz-retry">
-                Take the Quiz Again
-              </button>
-              <a href="cellar.html" class="quiz-restart">Explore the Cellar</a>
+              <button type="button" class="quiz-retry">Take It Again</button>
+              <a href="cellar.html" class="quiz-restart">Migrate to the Cellar</a>
             </div>
           </div>
         </div>
@@ -531,74 +589,98 @@
     <script src="assets/script.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // Result letters map to the four wine regions in the quiz-result
-        // blocks below (data-result="A"/"B"/"C"/"D"). Kept separate from
-        // that GA4 label map so the scoring logic doesn't care what the
-        // regions are actually called.
-        const regionNames = {
-          A: "pico_island_azores",
-          B: "vale_do_sao_francisco_brazil",
-          C: "meknes_morocco",
-          D: "hokkaido_japan",
-        };
+        // GA4 groups both quizzes' events under the same names
+        // (quiz_start / quiz_complete), so this category is what tells the
+        // heist quiz apart from the old "wine_not_quiz" in reports.
+        const GA_CATEGORY = "drunk_stole_my_wine_quiz";
 
-        let currentStep = 0;
         const totalSteps = 5;
+        const quizSection = document.getElementById("quiz");
         const steps = document.querySelectorAll(".quiz-step");
         const results = document.querySelectorAll(".quiz-result");
-        let scores = { A: 0, B: 0, C: 0, D: 0 };
+        const receipts = document.getElementById("quizReceipts");
+        const receiptMarks = document.querySelectorAll(".receipt-mark");
 
-        // Shared by the first question and the retry buttons, so both
-        // paths reset to the same clean state.
+        let currentStep = 0;
+        let score = 0;
+        // picks[i] is true/false for whether question i was answered right;
+        // the Receipts use it to say "You got / missed this one."
+        let picks = [];
+
+        // Score -> which of the four data-result blocks to show.
+        function tierFor(score) {
+          if (score === 5) return "top";
+          if (score >= 3) return "good";
+          if (score >= 1) return "low";
+          return "zero";
+        }
+
+        // Puts the quiz back to question 1 without reloading the page (a
+        // reload would also jump the reader back to the top of the home page).
         function resetQuiz() {
-          scores = { A: 0, B: 0, C: 0, D: 0 };
+          score = 0;
           currentStep = 0;
+          picks = [];
           results.forEach((r) => r.classList.remove("active"));
+          receipts.classList.remove("active");
+          receiptMarks.forEach((m) => {
+            m.textContent = "";
+            m.classList.remove("right", "miss");
+          });
           steps.forEach((s) => s.classList.remove("active"));
           steps[0].classList.add("active");
+          // The retry button sits at the bottom of the long Receipts list,
+          // so bring the first question back into view.
+          quizSection.scrollIntoView({ behavior: "smooth" });
+        }
+
+        function showResults() {
+          const tier = tierFor(score);
+          results.forEach((r) => {
+            if (r.getAttribute("data-result") === tier) {
+              r.classList.add("active");
+              r.querySelector(".score-num").textContent = score;
+            }
+          });
+
+          receiptMarks.forEach((mark, i) => {
+            mark.textContent = picks[i]
+              ? "You got this one."
+              : "You missed this one.";
+            mark.classList.add(picks[i] ? "right" : "miss");
+          });
+          receipts.classList.add("active");
+
+          // Completion event carries the rank and raw score, so GA4 shows
+          // both the completion rate (quiz_complete / quiz_start) and how
+          // scores are spread.
+          if (typeof gtag === "function") {
+            gtag("event", "quiz_complete", {
+              event_category: GA_CATEGORY,
+              result_type: tier,
+              score: score,
+            });
+          }
         }
 
         document.querySelectorAll(".quiz-option").forEach((btn) => {
           btn.addEventListener("click", () => {
-            // Fire a GA4 event the first time someone answers a question,
-            // so we can see how many visitors actually engage with the quiz
-            // vs. just scroll past it.
+            // Fire once, on the first answer, to count visitors who actually
+            // engage with the quiz rather than scroll past it.
             if (currentStep === 0 && typeof gtag === "function") {
-              gtag("event", "quiz_start", {
-                event_category: "wine_not_quiz",
-              });
+              gtag("event", "quiz_start", { event_category: GA_CATEGORY });
             }
 
-            const type = btn.getAttribute("data-type");
-            scores[type]++;
+            const right = btn.getAttribute("data-correct") === "1";
+            if (right) score++;
+            picks[currentStep] = right;
+
             steps[currentStep].classList.remove("active");
             currentStep++;
             if (currentStep < totalSteps) {
               steps[currentStep].classList.add("active");
             } else {
-              let winner = "A";
-              let max = -1;
-              for (const key in scores) {
-                if (scores[key] > max) {
-                  max = scores[key];
-                  winner = key;
-                }
-              }
-              results.forEach((r) => {
-                if (r.getAttribute("data-result") === winner)
-                  r.classList.add("active");
-              });
-
-              // Fire a GA4 event on completion, tagged with which region
-              // they landed on. Lets us see completion rate (quiz_complete
-              // count / quiz_start count) and the distribution across the
-              // four results in GA4's Events report.
-              if (typeof gtag === "function") {
-                gtag("event", "quiz_complete", {
-                  event_category: "wine_not_quiz",
-                  result_type: regionNames[winner],
-                });
-              }
+              showResults();
             }
           });
         });
@@ -606,6 +688,17 @@
         document.querySelectorAll(".quiz-retry").forEach((btn) => {
           btn.addEventListener("click", resetQuiz);
         });
+
+        // Track merch clicks from the quiz so we can see whether the
+        // BkTek plug actually sends anyone to the store.
+        const merch = document.getElementById("merchLink");
+        if (merch) {
+          merch.addEventListener("click", () => {
+            if (typeof gtag === "function") {
+              gtag("event", "merch_click", { event_category: GA_CATEGORY });
+            }
+          });
+        }
       });
     </script>
   </body>
